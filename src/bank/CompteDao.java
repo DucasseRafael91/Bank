@@ -32,7 +32,7 @@ public class CompteDao implements Dao<Compte> {
     @Override
     public Compte findById(String num_compte) {
         Compte compte = null;
-        String sql = "SELECT * FROM b_compte WHERE c_nm_compte = ?";
+        String sql = "SELECT * FROM b_compte WHERE c_num_compte = ?";
 
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
              PreparedStatement statement = connection.prepareStatement(sql)) {
