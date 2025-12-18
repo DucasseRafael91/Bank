@@ -2,19 +2,19 @@ package bank;
 
 public class Compte {
 	
-	private int id;
+	private String id;
 	private String titulaire;
 	private double solde;
 	
     // Constructeur
-    public Compte(String titulaire, double solde) {
+    public Compte(String id, String titulaire, double solde) {
         this.id = id;
         this.titulaire = titulaire;
         this.solde = solde;
     }
     
     // Getters
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -27,7 +27,7 @@ public class Compte {
     }
     
     //Setters
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

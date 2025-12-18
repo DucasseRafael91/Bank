@@ -9,8 +9,8 @@ public interface Dao<T> {
     void update(T obj);
 
     void delete(int id);
-
-    Object findById(int id);
+    
+    Object findById(String id);
 
     List<T> findAll();
 }
