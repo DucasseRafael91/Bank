@@ -56,8 +56,28 @@ public class CompteDao implements Dao<Compte> {
 
     @Override
     public ArrayList<Compte> findAll() {
-		return null;
+        ArrayList<Compte> comptes = new ArrayList<>();
+        String sql = "SELECT * FROM b_compte";
 
+        try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(sql)) {
+
+            while (resultSet.next()) {
+                String num_compte = resultSet.getString("c_num_compte");
+                String titulaire = resultSet.getString("c_titulaire");
+                double solde = resultSet.getDouble("c_solde");
+
+                Compte compte = new Compte(num_compte, titulaire, solde);
+                comptes.add(compte);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return comptes;
     }
+
 
 }
