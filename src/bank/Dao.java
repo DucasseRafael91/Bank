@@ -1,6 +1,6 @@
 package bank;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface Dao<T> {
 
@@ -8,10 +8,9 @@ public interface Dao<T> {
 
     void update(T obj);
 
-    void delete(int id);
-    
-    Object findById(String id);
+    void delete(String id);
 
-    List<T> findAll();
+    T findById(String id);
+
+    ArrayList<T> findAll();
 }
-
