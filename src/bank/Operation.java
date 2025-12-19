@@ -5,12 +5,12 @@ import java.util.Date;
 public class Operation {
     
     private int id;
-    private int compte;
+    private String compte;
     private int type_operation;
     private double montant;
     private Date date;
     
-    public Operation(int compte, int type_operation, double montant, Date date) {
+    public Operation(String compte, int type_operation, double montant, Date date) {
         this.compte = compte;
         this.type_operation = type_operation;
         this.montant = montant;
@@ -27,11 +27,11 @@ public class Operation {
     }
 
     // Getter et Setter pour compte
-    public int getCompte() {
+    public String getCompte() {
         return compte;
     }
 
-    public void setCompte(int compte) {
+    public void setCompte(String compte) {
         this.compte = compte;
     }
 
