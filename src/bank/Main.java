@@ -69,7 +69,7 @@ public class Main {
             System.out.println("\nCompte sélectionné :");
             System.out.println(
             	"ID : " + compteChoisi.getId() +
-                "Titulaire : " + compteChoisi.getTitulaire() +
+                " Titulaire : " + compteChoisi.getTitulaire() +
                 " | Solde : " + compteChoisi.getSolde()
             );
         } else {
